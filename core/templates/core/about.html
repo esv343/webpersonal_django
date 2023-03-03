@@ -1,10 +1,33 @@
-<h1>Mi web personal</h1>
-<ul>
-    <li><a href="/">Portada</a></li>
-    <li><a href="/about-me/">Acerca de</a></li>
-    <li><a href="/portfolio/">Portafolio</a></li>
-    <li><a href="/contact/">Contacto</a></li>
-</ul>
+{% extends 'core/base.html' %}
 
-<h2>Acerca de</h2>
-<p>Me llamo Elias y soy programador</p>
+
+{% block title %}
+    Acerca de
+{% endblock title %}
+    
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock%}
+
+{% block headers %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografia</span>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">   
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% load static %}{% static 'core/img/avatar.png' %}" alt="">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Elias Velazquez</h2>   
+        <p>Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
+      </div>
+    </div>  
+  </div>
+{% endblock content %}
+
+{% block separador %} <hr> {%endblock %}
+
+
+
