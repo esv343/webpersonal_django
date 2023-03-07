@@ -64,7 +64,11 @@
 
     <!-- Footer-->
     <footer>
-      {% block separador %} {%endblock %}
+      
+      {% if request.path != '/' %}
+        <hr>
+      {% endif %}
+        
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
